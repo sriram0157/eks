@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: students-data
+data:
+  student1: |
+    name: Sriram
+    rollno: 101
+    course: DevOps
+
+  student2: |
+    name: Ramesh
+    rollno: 102
+    course: AWS
+
+  student3: |
+    name: Suresh
+    rollno: 103
+    course: Kubernetes
