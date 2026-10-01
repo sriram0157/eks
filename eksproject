@@ -1,0 +1,15 @@
+{
+  "project": "eks-practice",
+  "environment": "dev",
+  "region": "ap-southeast-2",
+  "cluster": {
+    "name": "my-eks-cluster",
+    "version": "1.30"
+  },
+  "application": {
+    "name": "nginx",
+    "image": "nginx:latest",
+    "replicas": 2,
+    "port": 80
+  }
+}
