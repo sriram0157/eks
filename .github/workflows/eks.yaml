@@ -1,19 +1,20 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-    name: students-data
-data:
-  student1: |
-    name: Sriram
-    rollno: 101
-    course: DevOps
+name: EKS Workflow
 
-  student2: |
-    name: Ramesh
-    rollno: 102
-    course: AWS
+on:
+  push:
+    branches:
+      - main
 
-  student3: |
-    name: Suresh
-    rollno: 103
-    course: Kubernetes
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Display Message
+        run: echo "Deploying to EKS..."
+
+      - name: Show Files
+        run: ls -la
